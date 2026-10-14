@@ -3,8 +3,10 @@
 ## Intake and discovery
 The candidate requested the workflow and its use for the challenge. Codex read README, challenge, contracts, source and public tests. Static findings: authorization lacked confirmation; dispatch generated a new reference per retry; prompt requested unsupported estimates; chunks lost metadata; operator detail and telemetry discarded evidence. These were reading findings, not executed reproduction.
 
-## Workflow creation
-Created project AGENTS.md, .agents/skills/feature-delivery/SKILL.md, and role prompts in .agents/roles/ (requirements.md, architect.md, implementer.md, agent-builder.md, qa.md, reviewer.md, release.md). The candidate, Maximo Porretti, supplied the vision, defined the end-to-end delegation strategy from intake to delivery, and directed each stage. Files were produced with AI assistance.
+## Workflow creation and strategic time management
+Created project AGENTS.md, .agents/skills/feature-delivery/SKILL.md, and role prompts in .agents/roles/ (requirements.md, architect.md, implementer.md, agent-builder.md, qa.md, reviewer.md, release.md). 
+
+Strategic rationale: This agent-driven workflow was explicitly chosen by the candidate, Maximo Porretti, to manage the stringent time constraints of the challenge. A traditional manual development approach would have forced compromises between implementation depth, test coverage, and documentation quality within the available window. Structuring the process into disjoint, role-based agent stages allowed high-velocity execution: human direction focused on critical financial invariants, state machine contracts, and security rules, while AI agents executed implementation, rigorous test suites, and audit trails under continuous verification.
 
 ## Stage 1: Requirements intake (requirements.md)
 Defined scope and explicit acceptance criteria recorded in `submission/requirements.md`:

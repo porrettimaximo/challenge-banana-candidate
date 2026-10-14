@@ -39,6 +39,10 @@ QA y revisión | Cambios ejecutables | Pruebas, tipos, build, UI y revisión ind
 
 Entrega | Resultados verificados | PDF, sesiones, manifiesto y ZIP reproducible
 
+## Justificación estratégica ante la restricción de tiempo
+
+La adopción de este flujo de agentes modulares y asistidos por IA fue una decisión estratégica motivada por la optimización del tiempo disponible. Ante la envergadura del challenge (reparar la integridad financiera, diseñar un Copilot de soporte con evidencia y documentar rigurosamente los resultados) dentro de un plazo acotado de entrega, un enfoque manual tradicional habría obligado a sacrificar profundidad en las pruebas o alcance en la funcionalidad. Estructurar el trabajo en roles especializados (.agents/roles/) permitió maximizar la velocidad de ejecución: concentró la atención humana de Maximo Porretti en las decisiones arquitectónicas críticas (inmutabilidad, idempotencia atómica y seguridad), mientras la IA aceleró la implementación técnica, la suite de pruebas y la trazabilidad auditable.
+
 ## Cómo usamos el flujo en este challenge
 
 El coordinador leyó los requerimientos, fijó criterios y dividió los archivos. El agente banking implementó el flujo financiero; agent_support trabajó en soporte, documentación y luego empaquetado. reviewer revisó de forma independiente y reprodujo los fallos originales. El coordinador integró API e interfaz y preparó la demostración y el documento.

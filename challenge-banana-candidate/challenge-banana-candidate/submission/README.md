@@ -23,6 +23,8 @@ Maximo Porretti diseñó y dirigió el flujo completo de desarrollo de la aplica
 
 El registro cronológico de la ejecución del flujo se encuentra documentado en [submission/workflow-log.md](file:///c:/Users/Maxi/Desktop/challenge-banana-candidate/challenge-banana-candidate/challenge-banana-candidate/challenge-banana-candidate/submission/workflow-log.md).
 
+> **Justificación Estratégica ante la Restricción de Tiempo**: La elección de este flujo modular gobernado por agentes y asistido por IA fue una decisión deliberada de Maximo Porretti motivada por los estrictos plazos de entrega del challenge. Ante una ventana de tiempo acotada, un desarrollo manual tradicional habría obligado a recortar el alcance funcional o relajar la rigurosidad de las pruebas. La estructuración en roles especializados permitió maximizar la velocidad de ejecución: la supervisión humana se concentró en la arquitectura de estados, los invariantes financieros y las decisiones de seguridad, mientras que la IA aceleró la implementación, la batería de pruebas y la generación de evidencia técnica auditable.
+
 ---
 
 ## Part 1 - Fixes (Transferencias Confiables)

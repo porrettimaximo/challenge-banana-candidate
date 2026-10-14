@@ -268,6 +268,20 @@ def main():
         "AGENTS.md y roles modulares en .agents/roles/. El procedimiento operativo cubre el ciclo de vida completo de cada funcionalidad:"
     )
 
+    h2("3.1 Justificación Estratégica: Optimización ante la Restricción de Tiempo")
+    p_body(
+        "La adopción de este flujo de agentes modulares y asistidos por IA fue una decisión estratégica fundamentada en la gestión óptima "
+        "del tiempo disponible. Ante la envergadura del challenge (reparar integralmente la lógica financiera, diseñar una nueva feature "
+        "compleja de soporte y documentar rigurosamente los resultados) dentro de un plazo acotado de entrega, un enfoque manual tradicional "
+        "habría forzado compromisos indeseables: recortar la profundidad de las pruebas o simplificar la funcionalidad de soporte.\n\n"
+        "Estructurar el desarrollo en roles desacoplados (.agents/roles/) permitió maximizar la velocidad de ejecución sin resignar rigor técnico: "
+        "permitió concentrar la atención y supervisión humana de Maximo Porretti en las decisiones arquitectónicas de mayor impacto "
+        "(inmutabilidad de propuestas, idempotencia atómica, invariantes de seguridad y observabilidad de evidencia), delegando en los asistentes "
+        "de IA la codificación ágil de módulos, la ejecución de suites de pruebas exhaustivas y la generación de trazabilidad técnica reproducible."
+    )
+
+    h2("3.2 Estructura y Componentes del Sistema de Agentes")
+
     bullet("Punto de Entrada (AGENTS.md): ", "Define las políticas globales del repositorio, reglas de delegación, segregación de archivos y restricciones críticas de la versión moderna de Next.js.")
     bullet("Skill Procedimental (.agents/skills/feature-delivery/SKILL.md): ", "Codifica el procedimiento estándar de 7 etapas obligatorias: 1. Intake -> 2. Discovery -> 3. Design -> 4. Implement -> 5. Verify -> 6. Release -> 7. Handoff.")
     bullet("Instrucciones de Rol Desacopladas (.agents/roles/): ", "Instrucciones reutilizables que asignan responsabilidades claras a cada etapa:")
