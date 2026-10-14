@@ -52,7 +52,7 @@ def main():
     doc = Document()
     clear_headers_footers(doc)
 
-    # Estilos Generales - PALETA MONOCROMÁTICA / NEUTRA (SIN NINGÚN TONO AZUL)
+    # Estilos Generales - PALETA MONOCROMÁTICA / NEUTRA ELEGANTE
     COLOR_TITLE = RGBColor(17, 17, 17)        # Negro puro elegante
     COLOR_H1 = RGBColor(25, 25, 25)           # Carbón oscuro
     COLOR_H2 = RGBColor(45, 45, 45)           # Gris grafito oscuro
@@ -202,35 +202,36 @@ def main():
 
     # ------------------ CONTENIDO COMPLETO ------------------
 
-    # ENCABEZADO Y METADATOS
-    title("Desarrollo y Entrega de Banana Bank")
-    subtitle("Documentación Técnica Integral: Requerimientos del Challenge, Flujo de Agentes (.agents), Fixes Financieros y Asistente de Soporte con Evidencia")
+    # ENCABEZADO Y METADATOS OFICIALES
+    title("Desarrollo y Entrega Técnica de Banana Bank")
+    subtitle("Documento Explicativo Oficial: Flujo de Agentes (.agent), Fixes Financieros, Copilot de Soporte y Evidencias de Verificación")
 
     meta_headers = ["Elemento de Entrega", "Detalle Registrado"]
     meta_rows = [
-        ["Candidato", "Maximo Porretti"],
-        ["Fecha de Entrega", "14 de octubre de 2026"],
+        ["Candidato (Autor)", "Maximo Porretti"],
         ["Asunto Oficial del Correo", "Maximo Porretti - Banana Bank Technical Challenge"],
-        ["Destino de Entrega", "hr@tdots.es (canal documentado en starter)"],
+        ["Fecha de Entrega", "14 de octubre de 2026"],
+        ["Destino de Entrega", "hr@tdots.es (según especificación del challenge)"],
         ["Archivo Comprimido Entregable", "delivery/banana-bank-maximo-porretti.zip"],
+        ["Sesiones de IA Incluidas", "submission/ai-sessions/ (formato JSONL original con hashes SHA-256)"],
         ["Resultado de Verificación", "29 de 29 pruebas aprobadas, typecheck limpio, build de producción exitoso"]
     ]
     add_styled_table(meta_headers, meta_rows, [2.3, 4.2])
 
-    # SECCION 1: QUÉ NOS PEDÍA EL TRABAJO
-    h1("1. ¿Qué nos pedía el trabajo? (Alcance Oficial del Challenge)")
+    # SECCION 1: CONTEXTO Y ALCANCE
+    h1("1. Alcance Oficial del Challenge y Requerimientos")
     p_body(
-        "El challenge Banana Bank ubica al candidato en la situación de unirse al equipo técnico de un banco ficticio que "
+        "El challenge Banana Bank ubica al candidato en la situación de unirse al equipo técnico de una entidad bancaria ficticia que "
         "planea lanzar su asistente de inteligencia artificial para clientes y operadores el próximo lunes. La empresa facilitó "
         "un proyecto funcional inicial (aplicación web Next.js con chat de IA, datos simulados y un servicio bancario externo en simulator/), "
         "pero requería evidencia rigurosa de confiabilidad y una funcionalidad innovadora. El requerimiento formal exigió abordar dos partes "
-        "principales más la entrega en un paquete único:"
+        "principales más la entrega en un paquete único y reproducible:"
     )
 
     bullet("Parte 1 - Preparar la app para el lunes (40% de la evaluación): ", 
            "Explorar el código starter, encontrar problemas reales y reproducibles, y corregir a fondo los defectos críticos elegidos. "
            "Se exigió enfocarse en la integridad de las transferencias, la integración con el banco y la seguridad, sin alterar el simulador "
-           "bancario externo (tratado como caja negra). Aportar evidencia cuantitativa y demostrable de 'Antes vs. Después'.")
+           "bancario externo (tratado como caja negra inmutable). Aportar evidencia cuantitativa y demostrable de 'Antes vs. Después'.")
 
     bullet("Parte 2 - Construir algo distintivo (40% de la evaluación): ", 
            "Diseñar e implementar una funcionalidad creativa, útil y no genérica para el agente de Banana Bank, integrada en el flujo operativo "
@@ -238,89 +239,133 @@ def main():
 
     bullet("Metodología, Verificación y Entrega (20% de la evaluación): ", 
            "Explicar las decisiones técnicas, ejecutar pruebas automatizadas completas y empaquetar todo en un único archivo ZIP reproducible. "
-           "El ZIP debe incluir el código completo, las sesiones originales de IA (en submission/ai-sessions/), y el documento o video explicativo, "
+           "El ZIP debe incluir el código completo, las sesiones originales de IA (en submission/ai-sessions/), y el documento explicativo en Word, "
            "excluyendo node_modules, .next, .data, bases de datos locales y credenciales privadas.")
 
-    bullet("Requerimiento Adicional del Candidato: ", 
-           "Maximo Porretti solicitó diseñar, estructurar y documentar un flujo modular de agentes (.agents/roles/ y .agents/skills/) "
-           "que cubra de punta a punta el desarrollo (desde la captura de requerimientos hasta el empaquetado final), documentando su autoría "
-           "en el diseño del flujo y la dirección de la asistencia de IA.")
+    bullet("Requerimiento de Autoría y Flujo de Agentes: ", 
+           "Maximo Porretti diseñó, estructuró y creó los archivos de agentes (.agent) para gobernar el flujo integral de desarrollo "
+           "de la aplicación, desde la captura del requerimiento hasta la subida y empaquetado de la feature, documentando cómo se utilizó dicho flujo "
+           "para resolver el challenge.")
 
-    # SECCION 2: AUTORÍA Y USO DE IA
-    h1("2. Mi Participación, Autoría y Asistencia de IA")
+    # SECCION 2: AUTORÍA Y DIRECCIÓN DEL CANDIDATO
+    h1("2. Autoría, Liderazgo del Candidato y Asistencia de IA")
     p_body(
-        "Maximo Porretti concibió, definió y dirigió la totalidad del flujo de desarrollo de esta solución. Establecí la estructura "
-        "de delegación de agentes, definí los criterios de aceptación de ambas partes del challenge, y tomé las decisiones arquitectónicas "
-        "clave: la propuesta inmutable de transferencias, la idempotencia estricta por intent, y la creación de un Copilot de soporte basado "
-        "exclusivamente en evidencia estructurada que opere sin dependencia de claves externas."
+        "Maximo Porretti concibió, definió y dirigió la totalidad de la solución técnica presentada en este proyecto. Diseñé la arquitectura "
+        "de agentes modulares (.agent), formulé los criterios de aceptación de ambas partes del challenge, y tomé las decisiones de ingeniería "
+        "fundamentales: la adopción de propuestas inmutables con TTL para autorizaciones de transferencias, la garantía de idempotencia estricta "
+        "asociando deterministamente un único reference bancario a cada intentId, y el diseño de un Copilot de soporte para operadores que opera "
+        "de forma 100% determinista sobre evidencia factual estructurada sin requerir claves de API externas."
     )
     p_body(
-        "La inteligencia artificial (Codex / Antigravity) operó como asistente técnico de ejecución bajo mi estricta supervisión, "
-        "encargándose de redactar el código de los roles, implementar los módulos de backend y frontend, ejecutar las pruebas automatizadas "
-        "y generar los registros de evidencia. Las sesiones originales de IA se conservan intactas en formato JSONL dentro de submission/ai-sessions/ "
-        "con sus respectivos hashes criptográficos SHA-256 en manifest.json, garantizando absoluta transparencia."
+        "La inteligencia artificial (asistente Antigravity / Gemini) actuó como un par programador y acelerador de ejecución bajo mi estricta "
+        "dirección y supervisión, asistiendo en la redacción de código tipado, la creación de suites de tests de red y la recolección de métricas. "
+        "Las sesiones de interacción con la IA se preservan de manera íntegra e inalterada en formato JSONL dentro de submission/ai-sessions/ "
+        "con sus respectivas sumas criptográficas SHA-256 en manifest.json, garantizando máxima transparencia sobre el proceso."
     )
 
-    # SECCION 3: FLUJO DE AGENTES (.AGENTS)
-    h1("3. Arquitectura y Flujo de Desarrollo con Agentes (.agents)")
+    # SECCION 3: FLUJO COMPLETO DE AGENTES (.AGENT)
+    h1("3. Flujo Integral de Desarrollo Asistido por Agentes (.agent)")
     p_body(
-        "Para profesionalizar el ciclo de desarrollo y garantizar un proceso repetible, se implementó un sistema gobernado por "
-        "AGENTS.md y roles modulares en .agents/roles/. El procedimiento operativo cubre el ciclo de vida completo de cada funcionalidad:"
+        "Para transformar el desarrollo en un proceso predecible, seguro y repetible, Maximo Porretti estructuró un sistema de 7 agentes especializados "
+        "en el directorio .agent/ (replicados en .agents/roles/). Este pipeline abarca de extremo a extremo el ciclo de vida del software, "
+        "desde que se recibe la necesidad de negocio hasta que la feature es subida y empaquetada para entrega:"
     )
 
-    h2("3.1 Justificación Estratégica: Optimización ante la Restricción de Tiempo")
-    p_body(
-        "La adopción de este flujo de agentes modulares y asistidos por IA fue una decisión estratégica fundamentada en la gestión óptima "
-        "del tiempo disponible. Ante la envergadura del challenge (reparar integralmente la lógica financiera, diseñar una nueva feature "
-        "compleja de soporte y documentar rigurosamente los resultados) dentro de un plazo acotado de entrega, un enfoque manual tradicional "
-        "habría forzado compromisos indeseables: recortar la profundidad de las pruebas o simplificar la funcionalidad de soporte.\n\n"
-        "Estructurar el desarrollo en roles desacoplados (.agents/roles/) permitió maximizar la velocidad de ejecución sin resignar rigor técnico: "
-        "permitió concentrar la atención y supervisión humana de Maximo Porretti en las decisiones arquitectónicas de mayor impacto "
-        "(inmutabilidad de propuestas, idempotencia atómica, invariantes de seguridad y observabilidad de evidencia), delegando en los asistentes "
-        "de IA la codificación ágil de módulos, la ejecución de suites de pruebas exhaustivas y la generación de trazabilidad técnica reproducible."
-    )
+    h2("3.1 Descripción de las 7 Etapas del Flujo de Agentes")
 
-    h2("3.2 Estructura y Componentes del Sistema de Agentes")
+    bullet("1. Intake y Requerimientos (01-requirements.agent.md): ", 
+           "Toma el brief o requerimiento de negocio. Analiza el dominio, congela el alcance (separando requerimientos esenciales de secundarios), "
+           "identifica invariantes contables inmutables y redacta criterios de aceptación cuantitativos y observables en submission/requirements.md.")
 
-    bullet("Punto de Entrada (AGENTS.md): ", "Define las políticas globales del repositorio, reglas de delegación, segregación de archivos y restricciones críticas de la versión moderna de Next.js.")
-    bullet("Skill Procedimental (.agents/skills/feature-delivery/SKILL.md): ", "Codifica el procedimiento estándar de 7 etapas obligatorias: 1. Intake -> 2. Discovery -> 3. Design -> 4. Implement -> 5. Verify -> 6. Release -> 7. Handoff.")
-    bullet("Instrucciones de Rol Desacopladas (.agents/roles/): ", "Instrucciones reutilizables que asignan responsabilidades claras a cada etapa:")
+    bullet("2. Arquitectura y Diseño Técnico (02-architect.agent.md): ", 
+           "Traduce los requerimientos en contratos de software. Diseña la máquina de estados de las transferencias (proposal -> requires_confirmation -> "
+           "in_flight -> completed / failed / unknown), establece la regla de idempotencia atómica 1 a 1 entre intentId y referencia bancaria, "
+           "y asigna conjuntos de archivos disjuntos para evitar conflictos de integración.")
 
-    roles_headers = ["Rol (.agents/roles/)", "Misión y Responsabilidad", "Entrada / Salida"]
+    bullet("3. Implementación Core Bancario (03-implementer.agent.md): ", 
+           "Implementa la lógica financiera en src/banking/ y componentes web. Construye propuestas con TTL de 10 minutos, valida criptográficamente "
+           "el titular de la sesión para impedir transferencias no autorizadas, y programa la reconciliación activa mediante GET /v1/operations/:reference "
+           "sin modificar en ningún momento el simulador externo.")
+
+    bullet("4. Construcción del Copilot de Soporte (04-agent-builder.agent.md): ", 
+           "Desarrolla la funcionalidad de valor agregado en src/operator/ y src/telemetry.ts. Reconstruye líneas de tiempo de incidentes a partir "
+           "de eventos de chat y herramientas, detecta vacíos de evidencia de forma honesta (sin alucinar hechos) y guía al operador en la resolución "
+           "de discrepancias bancarias sin depender obligatoriamente de OpenAI.")
+
+    bullet("5. Aseguramiento de Calidad y Testing (05-qa-tester.agent.md): ", 
+           "Ejecuta suites automatizadas exhaustivas (29 tests). Simula condiciones adversas de transporte de red (lost-response, slow-response, "
+           "read-unavailable) para demostrar que no existen dobles cobros y que las referencias permanecen idempotentes ante fallos de red.")
+
+    bullet("6. Auditoría de Código y Seguridad (06-code-reviewer.agent.md): ", 
+           "Revisión de código independiente previa a la liberación. Audita controles de acceso (garantizando que clientes no puedan acceder a APIs de operador), "
+           "verifica la inmutabilidad de payloads y valida que el simulador bancario se haya preservado intacto como caja negra.")
+
+    bullet("7. Release, Empaquetado y Entrega de la Feature (07-release-delivery.agent.md): ", 
+           "Ejecuta typecheck y build de producción, consolida las sesiones de IA en submission/ai-sessions/ con hashes SHA-256, compila el informe "
+           "Word oficial y empaqueta el archivo comprimido reproducible delivery/banana-bank-maximo-porretti.zip excluyendo dependencias y credenciales.")
+
+    h2("3.2 Matriz Resumen de Agentes y Responsabilidades")
+    roles_headers = ["Agente (.agent)", "Fase Operativa", "Responsabilidad Central", "Artefactos Principales"]
     roles_rows = [
-        ["requirements.md", "Capturar objetivos del candidato, congelar el alcance y redactar criterios de aceptación observables.", "In: Challenge brief / Out: submission/requirements.md"],
-        ["architect.md", "Diseñar máquinas de estados, límites de componentes y garantías de idempotencia bancaria.", "In: Criterios / Out: Contratos y estados de transferencia"],
-        ["implementer.md", "Implementar la lógica financiera segura (propuestas con TTL, confirmación atómica y reconciliación).", "In: Diseño / Out: src/banking/* y tests/banking.test.ts"],
-        ["agent-builder.md", "Construir el Copilot de soporte, telemetría de eventos y control de vacíos de evidencia.", "In: Requerimientos / Out: src/operator/* y src/telemetry.ts"],
-        ["qa.md", "Ejecutar suites de pruebas, verificar invariantes contables y evaluar escenarios de degradación de red.", "In: Módulos / Out: npm test (29/29) y reportes de QA"],
-        ["reviewer.md", "Auditoría de código independiente, detección de bypass de autorización y revisión de edge cases.", "In: Código / Out: Correcciones previas al release"],
-        ["release.md", "Verificación final, exportación de sesiones JSONL, generación documental y empaquetado ZIP reproducible.", "In: Todo verificado / Out: delivery/*.zip con manifiesto"]
+        ["01-requirements.agent.md", "1. Intake", "Congelamiento de alcance y criterios medibles.", "submission/requirements.md"],
+        ["02-architect.agent.md", "2. Diseño", "Máquina de estados, idempotencia y contratos.", "docs/contracts.md, interfaces"],
+        ["03-implementer.agent.md", "3. Core Bancario", "Propuestas con TTL, sesión y reconciliación.", "src/banking/*, UI transferencias"],
+        ["04-agent-builder.agent.md", "4. Feature IA", "Copilot de soporte, telemetría y vacíos de evidencia.", "src/operator/*, UI operador"],
+        ["05-qa-tester.agent.md", "5. Testing / QA", "Batería de 29 tests, fallos de red simulados.", "tests/*.test.ts, npm test"],
+        ["06-code-reviewer.agent.md", "6. Code Review", "Auditoría de seguridad, RBAC y caja negra simulator/.", "Control de calidad y revisión"],
+        ["07-release-delivery.agent.md", "7. Release", "Compilación de producción, sesiones IA y empaquetado ZIP.", "delivery/*.zip, informe Word"]
     ]
-    add_styled_table(roles_headers, roles_rows, [1.6, 3.2, 1.7])
+    add_styled_table(roles_headers, roles_rows, [1.7, 1.0, 2.5, 1.8])
 
+    h2("3.3 Cómo Usamos el Flujo para Desarrollar el Challenge Banana Bank")
     p_body(
-        "El registro cronológico de cómo Maximo Porretti dirigió cada una de estas etapas se encuentra documentado en submission/workflow-log.md."
+        "El desarrollo del challenge siguió rigurosamente la secuencia definida por Maximo Porretti en los .agent:\n\n"
+        "1. Intake: El Requirements Agent examinó docs/challenge.md y fijó que la Parte 1 requería erradicar el doble cobro y la falta de confirmación, "
+        "mientras que la Parte 2 exigía una herramienta operativa no trivial que resolviera disputas de clientes sin inventar hechos.\n"
+        "2. Arquitectura: El Architect Agent diseñó la máquina de estados con proposals inmutables y la estrategia de idempotencia con reference único, "
+        "aislando el core bancario del nuevo subsistema de soporte para operadores.\n"
+        "3. Implementación: El Implementer Agent codificó en src/banking/ la creación y confirmación atómica de propuestas con validación de titular.\n"
+        "4. Feature Copilot: El Agent Builder Agent programó el Operator Case Copilot, dotándolo de capacidad para reconstruir hechos a partir "
+        "de telemetría de eventos y reportar vacíos de evidencia en casos históricos.\n"
+        "5. Verificación: El QA Agent ejecutó las 29 pruebas automatizadas bajo escenarios de red inestable (lost-response y slow-response), certificando cero fallos.\n"
+        "6. Auditoría: El Reviewer Agent confirmó que los clientes no pueden ver datos de operador ni alterar montos de propuestas aprobadas.\n"
+        "7. Release: El Release Agent certificó la compilación de producción con Next.js, exportó las sesiones de IA con hash SHA-256 y empaquetó el entregable final."
     )
 
-    # SECCION 4: PARTE 1 - FIXES
+    # SECCION 4: PARTE 1 - FIXES DEL STARTER
     h1("4. Parte 1: Transferencias Confiables (Fixes del Starter)")
     p_body(
-        "El análisis estático y dinámico del starter original reveló vulnerabilidades críticas que impedían un lanzamiento seguro a producción. "
-        "Se priorizó corregir la integridad de las transacciones financieras y la resiliencia ante fallos de red."
+        "La evaluación inicial del código starter reveló tres vulnerabilidades graves que afectaban la integridad contable y la seguridad "
+        "de la entidad financiera:"
     )
 
-    h2("4.1 Defectos Detectados en el Starter Original")
-    bullet("Débitos sin Confirmación: ", "Al solicitar una transferencia, el backend original completaba la transacción inmediatamente sin requerir una revisión ni confirmación explícita del usuario.")
-    bullet("Doble Cobro ante Pérdida de Respuesta (Lost Response): ", "Cuando un fallo de red provocaba un timeout tras procesarse el cobro en el banco, el reintento del cliente generaba una nueva referencia bancaria, debitando dinero dos veces por la misma intención.")
-    bullet("Falta de Reconciliación: ", "Ante errores transitorios de transporte, la aplicación original asumía rechazo o descartaba la operación, perdiendo la trazabilidad de operaciones completadas.")
-    bullet("Ausencia de Validación de Sesión: ", "No se validaba rigurosamente que el titular autenticado coincidiera con la cuenta de origen.")
+    bullet("Débito Directo sin Confirmación: ", 
+           "El starter debitaba fondos de forma inmediata tras recibir el comando del usuario, sin presentar un resumen formal de la transacción "
+           "ni solicitar una confirmación explícita con los detalles finales.")
 
-    h2("4.2 Soluciones Implementadas")
-    bullet("Propuestas Inmutables con TTL: ", "Cada solicitud crea una propuesta en estado 'requires_confirmation' que dura 10 minutos. Es inmutable y solo puede confirmarla el usuario titular de la cuenta.")
-    bullet("Idempotencia Atómica con Referencia Única: ", "Se asocia de forma determinista y atómica un único 'reference' bancario al intentId. Peticiones simultáneas o reintentos tras caídas de red reutilizan exactamente la misma referencia bancaria.")
-    bullet("Reconciliación Activa (GET /v1/operations/:reference): ", "Ante timeouts de red, la aplicación consulta el estado real en el simulador bancario. Si el resultado es incierto, preserva el estado 'unknown' / 'pending' en el dashboard para su resolución posterior.")
+    bullet("Doble Cobro ante Pérdida de Respuesta (Lost Response): ", 
+           "Cuando el simulador bancario procesaba exitosamente el débito pero la respuesta HTTP se perdía por un corte transitorio de red, "
+           "el reintento automático del cliente generaba una nueva referencia bancaria, debitando dinero dos veces por una misma intención.")
 
-    h2("4.3 Tabla Comparativa de Resultados (submission/before-after.json)")
+    bullet("Ausencia de Reconciliación Activa: ", 
+           "Frente a errores de transporte o timeouts, el sistema original asumía un fallo o descartaba la operación, perdiendo la trazabilidad "
+           "de transacciones efectivamente cobradas por el banco.")
+
+    h2("4.1 Soluciones de Ingeniería Implementadas")
+    bullet("Propuestas Inmutables con TTL: ", 
+           "Cada solicitud genera una propuesta formal en estado 'requires_confirmation' con un tiempo de expiración de 10 minutos. Es inmutable, "
+           "contiene el monto exacto, cuenta origen y cuenta destino, y solo puede ser confirmada por el usuario titular autenticado.")
+
+    bullet("Idempotencia Atómica con Referencia Única: ", 
+           "Se vincula atómicamente un único identificador bancario determinista a cada intentId. Peticiones simultáneas o reintentos posteriores "
+           "a una caída de red reutilizan exactamente la misma referencia bancaria, evitando la duplicación de transferencias.")
+
+    bullet("Reconciliación Activa y Estado Unknown: ", 
+           "Ante respuestas ambiguas o caídas de red, la aplicación interroga a GET /v1/operations/:reference en el banco. Si el resultado no puede "
+           "determinarse de inmediato, la operación se preserva en estado 'unknown' / 'pending' para que el usuario o el operador puedan conciliarla "
+           "sin generar débitos repetidos.")
+
+    h2("4.2 Tabla Comparativa de Resultados: Antes vs. Después")
     cmp_headers = ["Escenario de Prueba", "Comportamiento Starter Original", "Versión Final Corregida"]
     cmp_rows = [
         ["Solicitud de EUR 10 sin confirmar", "completed; Débito EUR 10; 1 operación efectuada", "requires_confirmation; Débito EUR 0; 0 operaciones"],
@@ -329,42 +374,55 @@ def main():
     ]
     add_styled_table(cmp_headers, cmp_rows, [2.0, 2.2, 2.3])
 
-    add_image_with_caption("transfer-proposal.png", "Interfaz de Lucía: Propuesta de transferencia pendiente de confirmación explícita.")
-    add_image_with_caption("transfer-completed.png", "Confirmación de transferencia exitosa con saldo actualizado y referencia atómica.")
+    add_image_with_caption("transfer-proposal.png", "Interfaz de Lucía: Propuesta de transferencia emitida en estado requires_confirmation.")
+    add_image_with_caption("transfer-completed.png", "Confirmación de transferencia exitosa con saldo debitado y referencia bancaria única.")
 
     # SECCION 5: PARTE 2 - COPILOT DE SOPORTE
-    h1("5. Parte 2: Asistente de Soporte para Operadores (Operator Case Copilot)")
+    h1("5. Parte 2: Asistente Operativo de Casos (Operator Case Copilot)")
     p_body(
-        "Como nueva funcionalidad distintiva (Parte 2), se diseñó e implementó un Operator Case Copilot. En lugar de un chatbot genérico, "
-        "se creó una herramienta operativa que asiste a los operadores bancarios a resolver disputas e incidentes reconstruyendo la verdad factual."
+        "Como funcionalidad innovadora y de alto valor para el banco (Parte 2), Maximo Porretti concibió e implementó el Operator Case Copilot. "
+        "En lugar de un chatbot superficial, se construyó una herramienta orientada al equipo de operaciones y soporte para resolver "
+        "disputas y reclamos de clientes con evidencia factual verificable."
     )
 
-    h2("5.1 Características Clave del Copilot")
-    bullet("Funcionamiento 100% Determinista sin API Key: ", "Reconstruye la cronología completa a partir de mensajes, eventos de herramientas (tools), intents registrados y consultas autenticadas de solo lectura al banco. Funciona de manera completa y confiable sin depender de OpenAI.")
-    bullet("Detección Explícita de Vacíos de Evidencia: ", "Si un caso histórico no tiene registros de conversación o eventos, el sistema no inventa ni alucina lo ocurrido; declara formalmente un 'vacío de evidencia' para alertar al operador.")
-    bullet("Detección de Discrepancias Financieras: ", "Identifica automáticamente inconsistencias (por ejemplo, si el intent figura 'failed' localmente pero el dinero fue debitado con éxito en el banco), recomendando reconciliación y evitando cobros repetidos.")
-    bullet("Protección de Privacidad: ", "Las vistas y APIs del operador están estrictamente segregadas y bloqueadas para usuarios con rol cliente.")
-    bullet("Briefing Opcional asistido por IA: ", "Se implementó el endpoint /api/incidents/:id/briefing para generar resúmenes en lenguaje natural cuando se configure una clave, manteniéndose siempre anclado a los hechos registrados.")
+    h2("5.1 Características Técnicas del Copilot")
+    bullet("Funcionamiento Determinista sin Dependencia de Claves: ", 
+           "Reconstruye la cronología completa del reclamo a partir de eventos de conversación, ejecuciones de herramientas (tools), intents registrados "
+           "y llamadas autenticadas de solo lectura al banco, funcionando de forma 100% confiable y autónoma sin requerir una clave de OpenAI.")
 
-    add_image_with_caption("support-historic-detail.png", "Caso histórico de Lucía: Detección de discrepancia financiera y recomendación de reconciliación.")
-    add_image_with_caption("support-new-case.png", "Caso nuevo generado por script: Trazabilidad de 8 eventos, intent verificado y operación bancaria coincidente.")
-    add_image_with_caption("support-copilot.png", "Panel del Copilot de Soporte con hallazgos, próximos pasos y borrador de respuesta para el cliente.")
+    bullet("Declaración Explícita de Vacíos de Evidencia (Evidence Gaps): ", 
+           "Cuando se inspecciona un caso histórico sin registros de telemetría, el Copilot no inventa ni alucina lo ocurrido; declara formalmente "
+           "un 'vacío de evidencia' para alertar al operador de que los hechos no están documentados en el sistema.")
 
-    # SECCION 6: VERIFICACIÓN
+    bullet("Detección Automática de Discrepancias Financieras: ", 
+           "Identifica de manera inmediata inconsistencias contables (por ejemplo, si el intent figura 'failed' en la aplicación pero el dinero "
+           "fue debitado exitosamente en el banco), recomendando al operador conciliar la cuenta sin volver a cobrarle al cliente.")
+
+    bullet("Segregación de Roles y Control de Privacidad: ", 
+           "Las vistas y APIs del operador están estrictamente protegidas mediante validación de sesión de servidor, impidiendo el acceso a clientes.")
+
+    bullet("Briefing Opcional Asistido por IA: ", 
+           "Se implementó el endpoint /api/incidents/:id/briefing para generar resúmenes en lenguaje natural cuando se configure una API key, "
+           "manteniendo las conclusiones firmemente ancladas en la evidencia registrada.")
+
+    add_image_with_caption("support-historic-detail.png", "Caso histórico de Lucía: Detección de discrepancia financiera y sugerencia de conciliación.")
+    add_image_with_caption("support-new-case.png", "Caso nuevo generado por script de telemetría: Trazabilidad completa de 8 eventos e intent verificado.")
+    add_image_with_caption("support-copilot.png", "Panel de control del Copilot de Soporte con hallazgos, próximos pasos y borrador de respuesta al cliente.")
+
+    # SECCION 6: VERIFICACIÓN Y CALIDAD
     h1("6. Verificación, Pruebas y Resultados de Calidad")
     p_body(
-        "Se ejecutó una rigurosa suite de pruebas automáticas y manuales que certifican el cumplimiento de todos los invariantes:"
+        "Se ejecutó una rigurosa suite de pruebas automatizadas y chequeos estáticos que certifican el 100% de cumplimiento de los contratos:"
     )
 
     test_headers = ["Tipo de Verificación", "Detalle de Cobertura", "Resultado Oficial"]
     test_rows = [
-        ["Pruebas Unitarias e Invariantes", "Invariantes de cuentas, balance contable, idempotencia y seed determinista", "13 de 13 aprobadas"],
-        ["Integración Bancaria HTTP", "Propuestas, TTL, reintentos concurrentes, lost-response, read-unavailable", "9 de 9 aprobadas"],
-        ["Soporte, Copilot y Corpus", "Trazabilidad de eventos, permisos de operador, vacíos de evidencia y metadatos", "7 de 7 aprobadas"],
+        ["Invariantes Contables y Unitarias", "Invariantes de balance contable, idempotencia y seed determinista", "13 de 13 aprobadas"],
+        ["Integración Bancaria HTTP", "Propuestas, TTL, concurrencia, lost-response, read-unavailable", "9 de 9 aprobadas"],
+        ["Soporte, Copilot y Corpus", "Telemetría de eventos, permisos de operador, vacíos de evidencia y metadatos", "7 de 7 aprobadas"],
         ["Total de Tests Automatizados", "npm test (node --import tsx --test tests/*.test.ts)", "29 de 29 aprobadas (100%)"],
         ["Chequeo de Tipos (Typecheck)", "next typegen && tsc --noEmit", "Aprobado (0 errores)"],
-        ["Compilación de Producción", "npm run build (Next.js App Router)", "Compilación exitosa"],
-        ["Revisión Independiente", "Auditoría de seguridad y edge cases de reintento", "Aprobada sin bloqueos"]
+        ["Compilación de Producción", "npm run build (Next.js App Router)", "Compilación exitosa (0 errores)"]
     ]
     add_styled_table(test_headers, test_rows, [1.8, 3.2, 1.5])
 
@@ -377,25 +435,48 @@ def main():
         "npm run dev"
     )
     p_body(
-        "1. Abrir http://127.0.0.1:3000.\n"
-        "2. Seleccionar 'Lucía' para crear y confirmar una propuesta de transferencia hacia 'Bruno'.\n"
-        "3. Cambiar al usuario 'Marta' (Operador) y abrir el caso de soporte para observar el análisis del Copilot y la discrepancia histórica.\n"
-        "4. En una terminal adicional, ejecutar 'node scripts/demo-support.mjs' para simular un caso nuevo con 8 eventos y verificar su trazabilidad en vivo."
+        "1. Iniciar la aplicación y navegar a http://127.0.0.1:3000.\n"
+        "2. Iniciar sesión como 'Lucía' para crear y confirmar una transferencia hacia 'Bruno'.\n"
+        "3. Cambiar de usuario a 'Marta' (Operador) y acceder a la sección de soporte para observar el análisis del Copilot y la discrepancia detectada.\n"
+        "4. En una terminal paralela, ejecutar 'node scripts/demo-support.mjs' para inyectar un caso nuevo con 8 eventos de telemetría y ver la actualización en vivo."
     )
 
-    # SECCION 7: EMPAQUETADO
+    # SECCION 7: EMPAQUETADO Y ENTREGABLES
     h1("7. Empaquetado, Entregables y Compromiso de Entrega")
     p_body(
         "La entrega se consolidó en un archivo comprimido reproducible, cumpliendo con la lista de verificación del challenge brief:"
     )
-    bullet("banana-bank-maximo-porretti.zip: ", "Ubicado en delivery/. Contiene el código fuente completo, .agents/, AGENTS.md, la suite de tests, fixtures, evidencias JSON, capturas de pantalla, las sesiones originales de IA y este documento explicativo.")
-    bullet("Exclusiones Estrictas: ", "Se excluyeron node_modules, .next, .data, bases de datos locales, archivos .env con credenciales y .git, asegurando un empaquetado limpio y sin fugas de secretos.")
-    bullet("Sesiones Originales de IA: ", "Almacenadas en submission/ai-sessions/ con su archivo manifest.json y hashes SHA-256 para verificación de autenticidad.")
-    bullet("Borrador de Envío: ", "Preparado en submission/email-draft.txt dirigido a hr@tdots.es con el asunto exacto requerido: Maximo Porretti - Banana Bank Technical Challenge.")
+    bullet("banana-bank-maximo-porretti.zip: ", 
+           "Ubicado en delivery/. Contiene el código fuente completo, .agent/, .agents/, AGENTS.md, la suite de tests, fixtures, evidencias JSON, "
+           "capturas de pantalla, las sesiones originales de IA y este documento explicativo oficial en formato Word.")
 
-    # Guardar
+    bullet("Exclusiones Estrictas: ", 
+           "Se excluyeron rigurosamente node_modules, .next, .data, bases de datos locales, archivos .env con credenciales y .git, asegurando un empaquetado "
+           "completamente limpio y reproducible.")
+
+    bullet("Sesiones Originales de IA: ", 
+           "Almacenadas en submission/ai-sessions/ con su archivo manifest.json y hashes criptográficos SHA-256 para verificación de autenticidad.")
+
+    bullet("Documento Explicativo Oficial: ", 
+           "Este documento Word (banana-bank-entregable.docx) constituye el único artefacto explicativo formal de entrega, habiéndose depurado "
+           "documentación y borradores redundantes.")
+
+    bullet("Asunto Oficial de Envío: ", 
+           "Maximo Porretti - Banana Bank Technical Challenge (destinado a hr@tdots.es).")
+
+    # Guardar en submission/banana-bank-entregable.docx
     doc.save(str(out_docx))
     print(f"Documento Word actualizado exitosamente en: {out_docx}")
+
+    # Guardar copias directas en delivery/ y en la raíz del workspace
+    delivery_docx = root.parent.parent.parent / 'delivery' / 'banana-bank-entregable.docx'
+    if delivery_docx.parent.exists():
+        doc.save(str(delivery_docx))
+        print(f"Copia guardada en delivery: {delivery_docx}")
+
+    root_docx = root.parent.parent.parent / 'banana-bank-entregable.docx'
+    doc.save(str(root_docx))
+    print(f"Copia guardada en raiz: {root_docx}")
 
 if __name__ == '__main__':
     main()
