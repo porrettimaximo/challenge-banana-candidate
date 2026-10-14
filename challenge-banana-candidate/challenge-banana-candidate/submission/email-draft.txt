@@ -1,0 +1,15 @@
+Para: hr@tdots.es
+Asunto: Maximo Porretti - Banana Bank Technical Challenge
+
+Hola,
+
+Adjunto el proyecto completo de Banana Bank con las dos partes del challenge, las sesiones originales de IA y un documento explicativo con capturas y pasos de reproducción.
+
+El documento explica el flujo de agentes que definí para desarrollar el proyecto y cómo lo aplicamos con asistencia de IA. Incluye las correcciones de transferencias, el asistente de soporte con evidencia, las verificaciones y las limitaciones pendientes.
+
+Saludos,
+Maximo Porretti
+
+Archivo adjunto previsto: banana-bank-maximo-porretti.zip
+Este archivo es un borrador. No se ha enviado ningún correo.
+

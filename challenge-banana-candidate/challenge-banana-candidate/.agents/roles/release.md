@@ -1,0 +1,2 @@
+# Release and handoff agent
+Require recorded public/integration test, typecheck, build and UI evidence before declaring readiness. Write submission explanation and reproducible demo. Copy original session JSONL files without replacing them with summaries; include child sessions. Scan project deliverables for credentials and exclude .env files except .env.example, node_modules, .next, .data and .git. ZIP at one root and extract to a fresh folder. Record package validation and remaining limitations. Never claim a remote upload without a verified destination and result.

@@ -1,0 +1,69 @@
+{
+  "format": 1,
+  "rootSessionId": "01a13a97-9f89-7353-88ca-9931b1591f13",
+  "exportedAt": "2026-10-14T13:49:17.601Z",
+  "note": "Original JSONL byte snapshots, not rewritten summaries. Active sessions may grow after export; rerun immediately before packaging.",
+  "sessions": [
+    {
+      "file": "rollout-2026-10-14T10-26-17-01a13a97-9f89-7353-88ca-9931b1591f13.jsonl",
+      "id": "01a13a97-9f89-7353-88ca-9931b1591f13",
+      "parentThreadId": null,
+      "agentPath": null,
+      "role": "orchestrator",
+      "sourceTimestamp": "2026-10-14T13:26:17.743Z",
+      "modelProvider": "openai",
+      "bytes": 1511063,
+      "sha256": "7dae15df165657f7c0ed831293691e3a897515cfac1dc58353b470ad091aaf77"
+    },
+    {
+      "file": "rollout-2026-10-14T10-39-56-01a13aa4-1ec1-7321-95a5-6101186047a2.jsonl",
+      "id": "01a13aa4-1ec1-7321-95a5-6101186047a2",
+      "parentThreadId": "01a13a97-9f89-7353-88ca-9931b1591f13",
+      "agentPath": "/root/banking",
+      "role": "banking",
+      "sourceTimestamp": "2026-10-14T13:39:56.738Z",
+      "modelProvider": "openai",
+      "bytes": 511554,
+      "sha256": "b74790c9d164dc64618be6db4a977a6fbffed59e51b6ae40ff5a27151359e18f"
+    },
+    {
+      "file": "rollout-2026-10-14T10-40-06-01a13aa4-43c2-70d2-aed2-c54f16e88137.jsonl",
+      "id": "01a13aa4-43c2-70d2-aed2-c54f16e88137",
+      "parentThreadId": "01a13a97-9f89-7353-88ca-9931b1591f13",
+      "agentPath": "/root/agent_support",
+      "role": "agent_support",
+      "sourceTimestamp": "2026-10-14T13:40:06.211Z",
+      "modelProvider": "openai",
+      "bytes": 599401,
+      "sha256": "ef696eb28e9e231e2d67495645bf1797583afd49af365f6e98014dcd8847c0e1"
+    },
+    {
+      "file": "rollout-2026-10-14T10-44-29-01a13aa8-47c8-7e40-8bdc-797caf22717e.jsonl",
+      "id": "01a13aa8-47c8-7e40-8bdc-797caf22717e",
+      "parentThreadId": "01a13a97-9f89-7353-88ca-9931b1591f13",
+      "agentPath": "/root/reviewer",
+      "role": "reviewer",
+      "sourceTimestamp": "2026-10-14T13:44:29.387Z",
+      "modelProvider": "openai",
+      "bytes": 516325,
+      "sha256": "2e1ae5a2dc7fa69fe1417b67b33ce666d458d849ec1e6752727da11e8a808938"
+    }
+  ],
+  "skipped": [
+    {
+      "id": "01a13aa3-bade-7442-8a08-b6cebd2db27e",
+      "parentThreadId": "01a13a97-9f89-7353-88ca-9931b1591f13",
+      "reason": "Internal approval guardian, not development work."
+    },
+    {
+      "id": "01a13aa7-8773-7062-80b9-3eb0ccc1a071",
+      "parentThreadId": "01a13aa4-1ec1-7321-95a5-6101186047a2",
+      "reason": "Internal approval guardian, not development work."
+    },
+    {
+      "id": "01a13aa8-75ed-7b00-b6f6-1c8b645a78be",
+      "parentThreadId": "01a13aa4-43c2-70d2-aed2-c54f16e88137",
+      "reason": "Internal approval guardian, not development work."
+    }
+  ]
+}

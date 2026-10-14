@@ -1,0 +1,39 @@
+{
+  "recordedAt": "2026-10-14T13:54:41.725Z",
+  "originalSource": "Unmodified supplied ZIP recovered from git HEAD:challenge-banana-candidate.zip",
+  "originalZipSha256": "4e3bfba3fc1eae6ff06166a05c8821a65ac587bcf75f1c707cc1956e655d984f",
+  "command": "node --import tsx scripts/reproduce-baseline.ts <extracted-original-project>",
+  "isolation": "Separate temporary application/bank databases, ephemeral localhost ports, original simulator, no main data changes.",
+  "before": {
+    "noConfirmation": {
+      "returnedStatus": "completed",
+      "debitCents": 1000,
+      "operationCount": 1
+    },
+    "confirmation": null,
+    "lostResponse": {
+      "returnedStatus": "completed",
+      "debitCents": 2000,
+      "operationCount": 2,
+      "distinctReferences": 2
+    }
+  },
+  "after": {
+    "noConfirmation": {
+      "returnedStatus": "requires_confirmation",
+      "debitCents": 0,
+      "operationCount": 0
+    },
+    "confirmation": {
+      "returnedStatus": "completed",
+      "debitCents": 1000,
+      "operationCount": 1
+    },
+    "lostResponse": {
+      "returnedStatus": "completed",
+      "debitCents": 1000,
+      "operationCount": 1,
+      "distinctReferences": 1
+    }
+  }
+}

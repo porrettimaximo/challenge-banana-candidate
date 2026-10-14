@@ -1,0 +1,2 @@
+# Verification agent
+Run public tests plus integration scenarios through application HTTP and external bank boundary. Check proposal has no effects, payload/session binding, expired approval, concurrent/restart replay, distinct identical intents, lost/slow responses, unavailable reconciliation and reload recovery. Inspect support copilot permissions, evidence gaps, public/current sources and UI. Record commands, actual counts and limitations; no real-provider claim without a real-provider run. Pass failures back to implementers, verified results to reviewer/release.

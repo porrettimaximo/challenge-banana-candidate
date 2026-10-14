@@ -1,0 +1,35 @@
+{
+  "demonstratedAt": "2026-10-14T13:52:38.821Z",
+  "conversationId": "c151f8f9-7ec7-4f05-8b2b-3167c6f33ecf",
+  "intentId": "508d2fea-6406-42e3-9399-25ca69d2e0d7",
+  "proposalStatus": "requires_confirmation",
+  "confirmationStatus": "completed",
+  "reference": "b45c84b8-7bf8-4229-a993-dd1655c0f76f",
+  "incidentId": "17797031-2408-4a3f-915c-567dc0a07411",
+  "recordedEvents": 8,
+  "copilot": {
+    "mode": "evidence",
+    "summary": "Recorded request: Please verify the EUR 2.50 support copilot demonstration transfer to Bruno.. Evidence: 0 messages, 8 events, 1 transfer intents. 0 critical discrepancies.",
+    "findings": [
+      {
+        "code": "transfer_verified",
+        "severity": "info",
+        "message": "The recorded intent and completed bank operation agree.",
+        "evidence": [
+          "intent:508d2fea-6406-42e3-9399-25ca69d2e0d7",
+          "bank:operation:ebc4ada7-d478-4d9a-aaa0-f9797e7abf3b"
+        ]
+      }
+    ],
+    "nextSteps": [
+      "Review the conversation and ask the customer for missing context; do not reconstruct unrecorded actions."
+    ],
+    "evidenceGaps": [
+      "No conversation messages were recorded."
+    ],
+    "customerDraft": "We are reviewing your request and checking the bank records. We will confirm the outcome after verification. Please avoid repeating an unresolved transfer.",
+    "bankObservedAt": "2026-10-14T13:52:38.775Z"
+  },
+  "briefingMode": "evidence",
+  "note": "New conversation and operations via public tool HTTP surface; no real model chat was invoked. Running this script again creates a distinct simulated transfer."
+}
