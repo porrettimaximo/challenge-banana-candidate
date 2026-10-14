@@ -468,15 +468,20 @@ def main():
     doc.save(str(out_docx))
     print(f"Documento Word actualizado exitosamente en: {out_docx}")
 
-    # Guardar copias directas en delivery/ y en la raíz del workspace
-    delivery_docx = root.parent.parent.parent / 'delivery' / 'banana-bank-entregable.docx'
-    if delivery_docx.parent.exists():
-        doc.save(str(delivery_docx))
-        print(f"Copia guardada en delivery: {delivery_docx}")
+    # Guardar copia en delivery/
+    delivery_dir = root / 'delivery'
+    delivery_dir.mkdir(parents=True, exist_ok=True)
+    doc.save(str(delivery_dir / 'banana-bank-entregable.docx'))
+    print(f"Copia guardada en delivery: {delivery_dir / 'banana-bank-entregable.docx'}")
 
-    root_docx = root.parent.parent.parent / 'banana-bank-entregable.docx'
-    doc.save(str(root_docx))
-    print(f"Copia guardada en raiz: {root_docx}")
+    # Guardar copias en directorio padre de trabajo si existe
+    if root.parent.exists() and root.parent != root:
+        parent_delivery = root.parent / 'delivery'
+        if parent_delivery.exists():
+            doc.save(str(parent_delivery / 'banana-bank-entregable.docx'))
+        parent_root_docx = root.parent / 'banana-bank-entregable.docx'
+        doc.save(str(parent_root_docx))
+        print(f"Copia sincronizada en workspace exterior: {parent_root_docx}")
 
 if __name__ == '__main__':
     main()
